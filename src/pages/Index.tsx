@@ -1,30 +1,16 @@
 import React from 'react';
-import ErrorMessage from '../components/404Page/ErrorMessage';
-import SecondaryMessage from '../components/404Page/SecondaryMessage';
-import FooterNav from '../components/404Page/FooterNav';
+import ConsoleView from '@/components/ConsoleView';
 
 /**
- * Represents the 404 Not Found error page.
- * 
- * This page utilizes a full-screen, centered layout to display the error message.
- * It is composed of three main components:
- * - SecondaryMessage: A brief text explaining the error.
- * - ErrorMessage: The large, stylized '404' number.
- * - FooterNav: A navigation footer at the bottom of the page.
+ * Renders a page that displays a console log view, based on a design image.
+ * This page sets a global monospace font and dark theme.
  */
 const IndexPage: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-background font-sans text-foreground">
-      <main className="flex-grow flex items-center justify-center p-4">
-        <div className="flex flex-col items-center gap-8 text-center">
-          {/* The secondary message is displayed above the main error code, as seen in the reference image. */}
-          <SecondaryMessage />
-          <ErrorMessage />
-        </div>
+    <div className="flex min-h-screen items-center justify-center bg-background p-4 font-mono text-foreground">
+      <main className="w-full max-w-screen-lg">
+        <ConsoleView />
       </main>
-
-      {/* The footer is positioned at the bottom of the viewport. */}
-      <FooterNav />
     </div>
   );
 };
