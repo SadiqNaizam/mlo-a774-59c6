@@ -20,6 +20,7 @@ export default {
 		extend: {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["Menlo", "Monaco", "Consolas", "monospace"],
       },
 			colors: {
 				border: 'hsl(var(--border))',
@@ -27,6 +28,7 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+        warning: 'hsl(var(--warning))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
